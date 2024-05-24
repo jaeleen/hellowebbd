@@ -93,7 +93,7 @@ html {
 
 /* Page 2 */
 .selection{
-    background: url(assets/jcob-nasyr-PItsVmyu34Q-unsplash.jpg) no-repeat center center fixed; 
+    background: url(assets/sacha-gregoire-vh0FucFJ7pw-unsplash.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -101,7 +101,7 @@ html {
     height: 100vh;
 }
 .landing2 h1{
-    margin-top: 415px;
+    margin-top: 300px;
     color: #FFDD55;
     max-width: fit-content;
     margin-left: auto;
@@ -134,7 +134,7 @@ html {
     position: fixed;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin-top: 50px;
+    margin-top: 35px;
     display: flex;
     gap: 25px;
     text-align: center;
@@ -143,9 +143,8 @@ html {
     background-color: #ffdd5500;
     border: 1px solid #FFDD55;
     border-radius: 20px;
-    padding: 5px 10px 5px 10px;
+    padding: 10px 20px 10px 20px;
     transition: scale 2s;
-    width:max-content;
 
 }
 .explore2 a{
@@ -154,7 +153,7 @@ html {
     color: #FFDD55;
     letter-spacing: 1.5;
     transition: scale 2s;
-    font-size: 9px;
+    font-size: 15px;
     color: #ffffff;
 
 }
@@ -168,17 +167,6 @@ html {
     color: #ffffff;
 
 }
-#bombshell{
-    background-color: #ffdd55;
-    border: 1px solid #FFDD55;
-    border-radius: 20px;
-    transition: scale 2s;
-    width:max-content;
-}
-#bombshell a{
-    color: #FF543E;
-
-}
 
 .form input{
     border-radius: 15px;
@@ -186,6 +174,13 @@ html {
     color: #ffffffef;
     border: 1px solid #FFDD55;
     padding: 10px;
+    margin: 10px;
+}
+form ::placeholder{
+    color: #ffffff;
+}
+form{
+    margin-top: -30px;
 }
 
 /* responsive design */
