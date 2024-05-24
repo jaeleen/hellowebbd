@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 maximum-scale=1, user-scalable=0" >
     <title>Account Set-Up</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -25,11 +25,12 @@
           </div>
           <form action="">
               <input type="text" id="pin" name="pin" placeholder="Game Pin" value=""><br>
+              <input type="text" id="pin" name="pin" placeholder="Gender" value=""><br>
               <input type="text" id="pin" name="pin" placeholder="Username" value=""><br>
               <input type="text" id="pin" name="pin" placeholder="Password" value=""><br>
 
               <div class="explore2">
-                  <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;" id="islander">
+                  <button id="islander">
                       <a href="#">Islander</a>
                   </button>
                   <button id="bombshell">
@@ -40,7 +41,9 @@
       
         
           <div class="public">
-              <!-- <p>Continue as guest</p> -->
+            <a href="">
+                <p>Continue as Guest...</p>
+            </a>
           </div>
     </div>
        
