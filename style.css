@@ -1,0 +1,213 @@
+body{
+    overflow: hidden; /* Hide scrollbars */
+    margin: auto;
+}
+.topnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+}
+.topnav img{
+    width: 40px;    
+    height: 40px;
+}
+
+html { 
+    background: url(assets/sacha-gregoire-vh0FucFJ7pw-unsplash.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .landing{
+    max-width: 100%;
+    width: 400px;
+    height: 600px;
+    /* background-color: blue; */
+    position: absolute; /*Can also be `fixed`*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    text-align: center;
+    line-height: 0.99;
+  }
+ 
+  .landing h1{
+    margin-top: 240px;
+    color: #FFDD55;
+    height: 60px;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 55px;
+    /* background: #ffffff; */
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+.landing span{
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.explore{
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+.explore button{
+    display: flex;
+    background-color: #ffdd5500;
+    border: 1px solid #FFDD55;
+    border-radius: 20px;
+    padding: 5px 30px 5px 30px;
+    transition: scale 2s;
+
+}
+.explore a{
+    text-decoration: none;
+    color: #FFDD55;
+    letter-spacing: 1.5;
+    transition: scale 2s;
+
+}
+.explore button:hover{
+    background-color: #ffffff00;
+    border: 1px solid #ffffff;
+    scale: 1.2;
+}
+.explore a:hover{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+/* Page 2 */
+.selection{
+    background: url(assets/jcob-nasyr-PItsVmyu34Q-unsplash.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+}
+.landing2 h1{
+    margin-top: 415px;
+    color: #FFDD55;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 55px;
+    /* background: #ffffff; */
+    font-family: "Josefin Sans", sans-serif;
+    /* letter-spacing: -1px; */
+}
+.form{
+    max-width: 100%;
+    color: #ffffff;
+    position: absolute; /*Can also be `fixed`*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    overflow: auto;
+    text-align: center;
+    line-height: 0.99;
+  }
+.landing2 span{
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    font-weight: 100;
+}
+.explore2{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 50px;
+    display: flex;
+    gap: 25px;
+    text-align: center;
+}
+.explore2 button{
+    background-color: #ffdd5500;
+    border: 1px solid #FFDD55;
+    border-radius: 20px;
+    padding: 5px 10px 5px 10px;
+    transition: scale 2s;
+    width:max-content;
+
+}
+.explore2 a{
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    color: #FFDD55;
+    letter-spacing: 1.5;
+    transition: scale 2s;
+    font-size: 9px;
+    color: #ffffff;
+
+}
+.explore2 button:hover{
+    background-color: #ffffff00;
+    border: 1px solid #ffffff;
+    scale: 1.2;
+}
+.explore2 a:hover{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+#bombshell{
+    background-color: #ffdd55;
+    border: 1px solid #FFDD55;
+    border-radius: 20px;
+    transition: scale 2s;
+    width:max-content;
+}
+#bombshell a{
+    color: #FF543E;
+
+}
+
+.form input{
+    border-radius: 15px;
+    background: none;
+    color: #ffffffef;
+    border: 1px solid #FFDD55;
+    padding: 10px;
+}
+
+/* responsive design */
+/* small phone */
+@media screen and (max-width: 320px) {
+   .landing h1{
+    font-size: 45px;
+    margin-top: 240px;
+   }
+   .landing2 h1{
+    margin-top: 418px;
+    font-size: 48px;
+  }
+}
+/* Tablet */
+/* @media screen and (max-width: 768px) {
+    .landing h1{
+        font-size: 65px;
+        margin-top: 215px;
+       }
+       .landing2 h1{
+        margin-top: 435px;
+        font-size: 65px;
+      }
+} */
