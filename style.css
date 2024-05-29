@@ -74,7 +74,7 @@ html {
 .explore{
     position: fixed;
     left: 50%;
-    bottom: 300px;
+    bottom: 30px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
 }
