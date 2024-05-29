@@ -22,11 +22,10 @@ html {
     background-size: cover;
     font-family: "Josefin Sans", sans-serif;
   }
-  .landing{
+  .center{
     max-width: 100%;
     width: 400px;
     height: 600px;
-    /* background-color: blue; */
     position: absolute; /*Can also be `fixed`*/
     left: 0;
     right: 0;
@@ -38,6 +37,7 @@ html {
     overflow: auto;
     text-align: center;
     line-height: 0.99;
+    overflow: hidden
   }
  
   .landing h1{
@@ -50,7 +50,21 @@ html {
     /* background: #ffffff; */
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
+    animation-duration: 3s;
+    animation-name: slidein;
 }
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+  }
+
 .landing span{
     font-family: "Josefin Sans", sans-serif;
     color: #ffffff;
@@ -60,7 +74,7 @@ html {
 .explore{
     position: fixed;
     left: 50%;
-    bottom: 20px;
+    bottom: 300px;
     transform: translate(-50%, -50%);
     margin: 0 auto;
 }
@@ -69,24 +83,42 @@ html {
     background-color: #ffdd5500;
     border: 1px solid #FFDD55;
     border-radius: 20px;
-    padding: 5px 30px 5px 30px;
-    transition: scale 2s;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+    animation: fadeInAnimation ease 5s;
+    -webkit-animation: fadeInAnimation ease 5s;
+  -moz-animation: fadeInAnimation ease 5s;
+  -o-animation: fadeInAnimation ease 5s;
+  -ms-animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
 
 }
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 .explore a{
     text-decoration: none;
     color: #FFDD55;
     letter-spacing: 1.5;
-    transition: scale 2s;
+    transition: all 0.5s ease-out;
 
 }
 .explore button:hover{
-    background-color: #ffffff00;
-    border: 1px solid #ffffff;
-    scale: 1.2;
+    background-color: #FFDD55;
+    border: 1px solid #FFDD55;
 }
-.explore a:hover{
+.explore a:hover, a:focus{
     text-decoration: none;
+    background-color: #ffdd5500;
     color: #ffffff;
 
 }
