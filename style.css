@@ -8,11 +8,18 @@ body{
     align-items: center;
     width: 100vw;
     height: 40px;
+    animation: fadeInAnimation ease 5s;
+    -webkit-animation: fadeInAnimation ease 5s;
+  -moz-animation: fadeInAnimation ease 5s;
+  -o-animation: fadeInAnimation ease 5s;
+  -ms-animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
 }
 .topnav img{
     width: 40px;    
     height: 40px;
 }
+
 
 html { 
     background: url(assets/sacha-gregoire-vh0FucFJ7pw-unsplash.jpg) no-repeat center center fixed; 
@@ -37,8 +44,14 @@ html {
     overflow: auto;
     text-align: center;
     line-height: 0.99;
-    overflow: hidden
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
   }
+  /* Called in javascript */
+  .zoom-out {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
  
   .landing h1{
     margin-top: 240px;
@@ -125,15 +138,21 @@ html {
 
 /* Page 2 */
 .selection{
-    background: url(assets/sacha-gregoire-vh0FucFJ7pw-unsplash.jpg) no-repeat center center fixed; 
+    background: url(assets/sean-oulashin-KMn4VEeEPR8-unsplash.jpg) no-repeat center center fixed; 
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
+	animation: scaleUp .7s ease both;
+ 
 }
+@keyframes scaleUp {
+	from { opacity: 0; transform: scale(.8); }
+}
+
 .landing2 h1{
-    margin-top: 300px;
+    margin-top: 200px;
     color: #FFDD55;
     max-width: fit-content;
     margin-left: auto;
@@ -142,20 +161,23 @@ html {
     /* background: #ffffff; */
     font-family: "Josefin Sans", sans-serif;
     /* letter-spacing: -1px; */
+    /* animation: scaleUp .7s ease both; */
 }
 .form{
-    max-width: 100%;
+    max-width: 90%;
     color: #ffffff;
     position: absolute; /*Can also be `fixed`*/
+    height: 100vh;
     left: 0;
     right: 0;
     top: 0;
     bottom: 0;
     margin: auto;
-    max-width: 100%;
     overflow: auto;
     text-align: center;
     line-height: 0.99;
+    overflow: hidden;
+    animation: scaleUp .9s ease both;
   }
 .landing2 span{
     font-family: "Josefin Sans", sans-serif;
@@ -206,9 +228,22 @@ html {
     border: 1px solid #FFDD55;
     padding: 10px;
     margin: 10px;
+    -webkit-transition: width .0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
 }
+
 form ::placeholder{
     color: #ffffff;
+
+}
+.form input:focus{
+    border: 1px solid #ffffff;
+    outline: none;
+    transform: scale(1.2);
+
+}
+@keyframes width {
+	from { opacity: 0; transform: scale(.8); }
 }
 form{
     margin-top: -30px;
@@ -217,7 +252,7 @@ form{
     margin-top: 95px;
     font-family: "Josefin Sans", sans-serif;
     font-size: 12px;
-    font-weight: 100;
+    font-weight: 200;
 }
 .public a{
     text-decoration: none;
@@ -231,7 +266,7 @@ form{
     margin-top: 240px;
    }
    .landing2 h1{
-    margin-top: 300px;
+    margin-top: 160px;
     font-size: 48px;
   }
 }
