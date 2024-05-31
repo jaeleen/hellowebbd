@@ -132,17 +132,18 @@ html {
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
-	animation: slidein .6s ease-in-out;
- 
+	animation: scaleUp .9s; 
+    animation-timing-function: linear;
 }
 
 .landing2 h1{
-    margin-top: 200px;
+    margin-top: 250px;
+    margin-bottom: 40px;
     color: #FFDD55;
     max-width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    font-size: 55px;
+    font-size: 45px;
     /* background: #ffffff; */
     font-family: "Josefin Sans", sans-serif;
     /* letter-spacing: -1px; */
@@ -162,12 +163,8 @@ html {
     text-align: center;
     line-height: 0.99;
     overflow: hidden;
-    animation: fadeInAnimation ease 2s;
-    -webkit-animation: fadeInAnimation ease 2s;
-  -moz-animation: fadeInAnimation ease 2s;
-  -o-animation: fadeInAnimation ease 2s;
-  -ms-animation: fadeInAnimation ease 2s;
-    animation-iteration-count: 1;
+    animation-delay: 3s;
+    animation: fadeInAnimation ease 5s;
 }
 .landing2 span{
     font-family: "Josefin Sans", sans-serif;
@@ -184,8 +181,8 @@ html {
     text-align: center;
 }
 .explore2 button{
-    background-color: #ffdd55;
-    border: 1px solid #FFDD55;
+    background-color: #FF543E;
+    border: 1px solid #FF543E;
     border-radius: 20px;
     padding: 10px 20px;
     transition: scale 2s;
@@ -194,7 +191,7 @@ html {
 .explore2 a{
     text-decoration: none;
     font-family: "Josefin Sans", sans-serif;
-    color: #FF543E;
+    color: #ffffff;
     letter-spacing: 1.5;
     transition: scale 2s;
     font-size: 13px;
@@ -202,7 +199,7 @@ html {
 }
 .explore2 button:hover{
     background-color: #ffffff00;
-    border: 1px solid #ffffff;
+    border: 1px solid #FFDD55;
     scale: 1.2;
 }
 .explore2 a:hover{
@@ -321,6 +318,10 @@ form{
 .players{
     margin-top: 10px;
 }
+.couplepage{
+    transition: all;
+    animation: scaleUp .4s; 
+}
 
 /* Key Frames */
 @keyframes scaleUp {
@@ -361,7 +362,7 @@ form{
    }
    .landing2 h1{
     margin-top: 160px;
-    font-size: 48px;
+    font-size: 40px;
   }
 }
 
