@@ -1,6 +1,11 @@
 body{
-    overflow: hidden; /* Hide scrollbars */
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
     margin: auto;
+}
+body::-webkit-scrollbar {
+    display: none;
 }
 .topnav{
     display: flex;
@@ -22,12 +27,16 @@ body{
 
 
 html { 
+    background-color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .welcome{
     background: url(assets/sacha-gregoire-vh0FucFJ7pw-unsplash.jpg) no-repeat center center fixed; 
+    height: 100vh;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    font-family: "Josefin Sans", sans-serif;
   }
   .center{
     max-width: 100%;
@@ -66,17 +75,6 @@ html {
     animation-duration: 3s;
     animation-name: slidein;
 }
-@keyframes slidein {
-    from {
-      margin-left: 100%;
-      width: 300%;
-    }
-  
-    to {
-      margin-left: 0%;
-      width: 100%;
-    }
-  }
 
 .landing span{
     font-family: "Josefin Sans", sans-serif;
@@ -108,16 +106,6 @@ html {
     animation-iteration-count: 1;
 
 }
-@keyframes fadeInAnimation {
-    0% {
-        opacity: 0;
-    }
-
-    100% {
-        opacity: 1;
-    }
-}
-
 .explore a{
     text-decoration: none;
     color: #FFDD55;
@@ -144,11 +132,8 @@ html {
     -o-background-size: cover;
     background-size: cover;
     height: 100vh;
-	animation: scaleUp .7s ease both;
+	animation: slidein .6s ease-in-out;
  
-}
-@keyframes scaleUp {
-	from { opacity: 0; transform: scale(.8); }
 }
 
 .landing2 h1{
@@ -177,8 +162,13 @@ html {
     text-align: center;
     line-height: 0.99;
     overflow: hidden;
-    animation: scaleUp .9s ease both;
-  }
+    animation: fadeInAnimation ease 2s;
+    -webkit-animation: fadeInAnimation ease 2s;
+  -moz-animation: fadeInAnimation ease 2s;
+  -o-animation: fadeInAnimation ease 2s;
+  -ms-animation: fadeInAnimation ease 2s;
+    animation-iteration-count: 1;
+}
 .landing2 span{
     font-family: "Josefin Sans", sans-serif;
     color: #ffffff;
@@ -228,7 +218,6 @@ html {
     border: 1px solid #FFDD55;
     padding: 10px;
     margin: 10px;
-    -webkit-transition: width .0.3s ease-in-out;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -242,9 +231,7 @@ form ::placeholder{
     transform: scale(1.2);
 
 }
-@keyframes width {
-	from { opacity: 0; transform: scale(.8); }
-}
+
 form{
     margin-top: -30px;
 }
@@ -258,6 +245,113 @@ form{
     text-decoration: none;
     color: #ffffff;
 }
+
+/* User profile css */
+
+.avatar {
+    vertical-align: middle;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #FFDD55;
+}
+.profile{
+    position: absolute;
+    top: 8px;
+    right: 15px;
+}
+.proname p{
+    display: inline-block;
+    margin-top: 8px;
+}
+.timer{
+    margin-inline: auto;
+    left: 50%;
+    right: 50%;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+}
+#demo{
+    font-size: 20px;
+    margin-top: 30px;
+  }
+.title{
+    left: 50%;
+    right: 50%;
+    text-align: center;
+    font-size: 12px;
+}
+.cardtitle{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+.location{
+    font-size: 12px;
+    color: #707070;
+}
+.uname{
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 3px;
+}
+
+.playerimg{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.usertext{
+    padding-left: 4px;
+    vertical-align: middle;
+    display:inline-block;
+}
+.couple{
+    text-align: center;
+    border-bottom: 1px solid #C9C9C9;
+    height: 30px;
+}
+.couple a{
+    text-decoration: none;
+    color: #FF543E;
+}
+.players{
+    margin-top: 10px;
+}
+
+/* Key Frames */
+@keyframes scaleUp {
+	from { opacity: 0; transform: scale(.10); }
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+
+
+
+
+
 /* responsive design */
 /* small phone */
 @media screen and (max-width: 320px) {
