@@ -56,24 +56,33 @@ html {
     overflow: hidden;
     transition: transform 0.6s ease-in-out;
   }
-  /* Called in javascript */
-  .zoom-out {
-    animation-duration: 3s;
-    animation-name: slidein;
-}
- 
+  .landing{
+    height: 500px;
+  }
+ .landing p{
+    margin-top: 30px;
+    color: #ffffff;
+    animation: fadeInAnimation ease 2s;
+
+ }
   .landing h1{
-    margin-top: 240px;
-    color: #FFDD55;
-    height: 60px;
+    margin-top: 150px;
+    color: #ffdd55;
     margin-left: auto;
     margin-right: auto;
-    font-size: 55px;
+    font-size: 40px;
     /* background: #ffffff; */
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     animation-duration: 3s;
-    animation-name: slidein;
+    animation: fadeInAnimation ease 3s;
+}
+
+.landing #topic{
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 70px;
+    font-size: 55px;
+    animation-name: scaleUp;
 }
 
 .landing span{
@@ -124,6 +133,106 @@ html {
 
 }
 
+/* test animation */
+.animate {
+    font-size: 35px;
+    letter-spacing: normal;
+    margin: 200px 0 0;
+}
+  
+.animate span {
+    display: inline-block;
+  }
+.animate span:nth-of-type(2) {
+    animation-delay: .05s;
+  }
+  .animate span:nth-of-type(3) {
+    animation-delay: .1s;
+  }
+  .animate span:nth-of-type(4) {
+    animation-delay: .15s;
+  }
+  .animate span:nth-of-type(5) {
+    animation-delay: .2s;
+  }
+  .animate span:nth-of-type(6) {
+    animation-delay: .25s;
+  }
+  .animate span:nth-of-type(7) {
+    animation-delay: .3s;
+  }
+  .animate span:nth-of-type(8) {
+    animation-delay: .35s;
+  }
+  .animate span:nth-of-type(9) {
+    animation-delay: .4s;
+  }
+  .animate span:nth-of-type(10) {
+    animation-delay: .45s;
+  }
+  .animate span:nth-of-type(11) {
+    animation-delay: .5s;
+  }
+  .animate span:nth-of-type(12) {
+    animation-delay: .55s;
+  }
+  .animate span:nth-of-type(13) {
+    animation-delay: .6s;
+  }
+  .animate span:nth-of-type(14) {
+    animation-delay: .65s;
+  }
+  .animate span:nth-of-type(15) {
+    animation-delay: .7s;
+  }
+  .animate span:nth-of-type(16) {
+    animation-delay: .75s;
+  }
+  .animate span:nth-of-type(17) {
+    animation-delay: .8s;
+  }
+  .animate span:nth-of-type(18) {
+    animation-delay: .85s;
+  }
+  .animate span:nth-of-type(19) {
+    animation-delay: .9s;
+  }
+  .animate span:nth-of-type(20) {
+    animation-delay: .95s;
+  }
+
+
+.seven span {
+    color: #FFDD55;
+    opacity: 0;
+    transform: translate(-150px, 0) scale(.3);
+    animation: leftRight .5s forwards;
+  }
+  
+  
+  @keyframes leftRight {
+    40% {
+      transform: translate(50px, 0) scale(.7);
+      opacity: 1;
+      color: #559495;
+    }
+  
+    60% {
+      color: #0f40ba;
+    }
+  
+    80% {
+      transform: translate(0) scale(2);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translate(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+
 /* Page 2 */
 .selection{
     background: url(assets/sean-oulashin-KMn4VEeEPR8-unsplash.jpg) no-repeat center center fixed; 
@@ -144,10 +253,8 @@ html {
     margin-left: auto;
     margin-right: auto;
     font-size: 45px;
-    /* background: #ffffff; */
     font-family: "Josefin Sans", sans-serif;
-    /* letter-spacing: -1px; */
-    /* animation: scaleUp .7s ease both; */
+  
 }
 .form{
     max-width: 90%;
@@ -323,6 +430,50 @@ form{
     animation: scaleUp .4s; 
 }
 
+/* Welcome page */
+.banner {
+    position: relative;
+    height: 500px;
+  }
+  
+  .banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .banner-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  .banner-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .banner-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
 /* Key Frames */
 @keyframes scaleUp {
 	from { opacity: 0; transform: scale(.10); }
