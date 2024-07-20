@@ -1,0 +1,69 @@
+<%- include("partials/header.ejs") %>
+<body>
+
+    <div class="loveislandui-container">
+        <!-- <div class="villa-img">
+            <img src="/images/9f950d1551dd2aa30c65d0af1f321a1f.png" alt="">
+        </div> -->
+        <div class="centerpiece">
+            <div class="sec-container">
+                <div class="sec-p">
+                    <p>Try Our Love Island Online Game! Join the villa by signing in with your Instagram or as a temporary user. Couple up, join challenges, and enjoy the fun. Temporary users get 31 days of access. Continue with Instagram or quit anytime.</p>
+                </div>
+                
+                <div class="sec-h">
+                    <h2 class="drop-in">hello<span>webbd</span></h2>
+                </div>
+                
+                <div class="liu-button">
+                    <button class="button-86"><i class="fa-brands fa-instagram"></i> Log in </button>
+                    <button class="sec-button">Continue as Guest</button>
+                </div>
+                
+            </div>
+        </div>
+       
+        <div class="row">
+            <div class="info-section"> 
+                <div class="glass">
+                    <img src="/images/vecteezy_3d-illustration-of-small-island-view-icon-isolated-on_44635273.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure iste assumenda optio dolorem. Tempore repellat explicabo autem quaerat soluta, quo, cupiditate dolores, quibusdam possimus eligendi iure dolor perferendis dignissimos maxime.</p>
+                </div>
+                <div class="glass">
+                    <img src="/images/vecteezy_3d-illustration-of-small-island-view-icon-isolated-on_44635273.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure iste assumenda optio dolorem. Tempore repellat explicabo autem quaerat soluta, quo, cupiditate dolores, quibusdam possimus eligendi iure dolor perferendis dignissimos maxime.</p>
+                </div>
+                <div class="glass">
+                    <img src="/images/vecteezy_3d-illustration-of-small-island-view-icon-isolated-on_44635273.png" alt="">
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Iure iste assumenda optio dolorem. Tempore repellat explicabo autem quaerat soluta, quo, cupiditate dolores, quibusdam possimus eligendi iure dolor perferendis dignissimos maxime.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    
+
+</body>
+
+<script>
+document.addEventListener("DOMContentLoaded", function() {
+  const text = document.querySelector('.drop-in');
+  const content = text.textContent;
+  const spanText = text.querySelector('span').textContent; // Getting the text inside the span element
+  text.innerHTML = '';
+  
+  for (let i = 0; i < content.length; i++) {
+    const span = document.createElement('span');
+    span.textContent = content[i];
+    span.style.animationDelay = `${i * 0.08}s`; // Adjust delay as needed
+   
+     // Add a class to the first five letters
+     if (i < 5) {
+        span.style.color = '#fff';
+    }
+    text.appendChild(span);
+
+  }
+});
+</script>
+</html>

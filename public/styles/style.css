@@ -1,0 +1,1005 @@
+@import url('https://fonts.googleapis.com/css2?family=Eater&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+body{
+    overflow-y: scroll;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+    margin: auto;
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+.topnav{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 40px;
+    animation: fadeInAnimation ease 5s;
+    -webkit-animation: fadeInAnimation ease 5s;
+  -moz-animation: fadeInAnimation ease 5s;
+  -o-animation: fadeInAnimation ease 5s;
+  -ms-animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+}
+.topnav img{
+    width: 40px;    
+    height: 40px;
+}
+
+
+html { 
+    background-color: #ffffff;
+    font-family: "Josefin Sans", sans-serif;
+  }
+  .welcome{
+    background-image: url(/images/wp4444298-love-island-wallpapers.jpg); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    height: 100vh;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .center{
+    max-width: 100%;
+    width: 100%;
+    height: 700px;
+    position: absolute; /*Can also be `fixed`*/
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    max-width: 100%;
+    max-height: 100%;
+    overflow: auto;
+    text-align: center;
+    line-height: 0.99;
+    overflow: hidden;
+    transition: transform 0.6s ease-in-out;
+  }
+  .landing{
+    height: 200px;
+  }
+ .landing p{
+    margin-top: 30px;
+    color: #ffffff;
+    animation: fadeInAnimation ease 2s;
+
+ }
+  .landing h1{
+    margin-top: 150px;
+    color: #ffdd55;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 40px;
+    /* background: #ffffff; */
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    animation-duration: 3s;
+    animation: fadeInAnimation ease 3s;
+}
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: inline-block;
+  position: relative;
+  box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.2);
+  transition: .2s ease;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+li:nth-child(1) { background-image: url(/images/jeffery-erhunse-BQMZ5ligqps-unsplash.jpg); }
+li:nth-child(2) { background-image: url(/images/sacha-gregoire-vh0FucFJ7pw-unsplash.jpg); }
+li:nth-child(3) { background-image: url(/images/igor-starkov-f4mLA8nDbRg-unsplash.jpg); }
+li:nth-child(4) { background-image: url(/images/sean-oulashin-KMn4VEeEPR8-unsplash.jpg); }
+li:nth-child(n+2) { margin-left: -50px; }
+
+ul:hover li:nth-child(n+2) {
+   margin-left: -10px;
+}
+
+.landing #topic{
+    font-family: "Josefin Sans", sans-serif;
+    margin-top: 0px;
+    font-size: 65px;
+    animation-name: scaleUp;
+}
+
+.landing span{
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    font-weight: 100;
+}
+
+.explore{
+    position: fixed;
+    left: 50%;
+    bottom: 250px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+.explore button{
+    display: flex;
+    background-color: #ffdd5500;
+    border: 2px solid #FFDD55;
+    border-radius: 20px;
+    padding: 10px 30px 10px 30px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.5s ease-out;
+    animation: fadeInAnimation ease 5s;
+    -webkit-animation: fadeInAnimation ease 5s;
+  -moz-animation: fadeInAnimation ease 5s;
+  -o-animation: fadeInAnimation ease 5s;
+  -ms-animation: fadeInAnimation ease 5s;
+    animation-iteration-count: 1;
+
+}
+.explore a{
+    text-decoration: none;
+    color: #FFDD55;
+    letter-spacing: 1.5;
+    transition: all 0.5s ease-out;
+
+}
+.explore button:hover{
+    background-color: #FFDD55;
+    border: 1px solid #FFDD55;
+}
+.explore a:hover, a:focus{
+    text-decoration: none;
+    background-color: #ffdd5500;
+    color: #ffffff;
+
+}
+
+/* test animation */
+.animate {
+    /* opacity: 0; */
+    font-size: 75px;
+    letter-spacing: normal;
+    margin: 200px 0 0;
+}
+  
+.animate span {
+    display: inline-block;
+  }
+.animate span:nth-of-type(2) {
+    animation-delay: .05s;
+  }
+  .animate span:nth-of-type(3) {
+    animation-delay: .1s;
+  }
+  .animate span:nth-of-type(4) {
+    animation-delay: .15s;
+  }
+  .animate span:nth-of-type(5) {
+    animation-delay: .2s;
+  }
+  .animate span:nth-of-type(6) {
+    animation-delay: .25s;
+  }
+  .animate span:nth-of-type(7) {
+    animation-delay: .3s;
+  }
+  .animate span:nth-of-type(8) {
+    animation-delay: .35s;
+  }
+  .animate span:nth-of-type(9) {
+    animation-delay: .4s;
+  }
+  .animate span:nth-of-type(10) {
+    animation-delay: .45s;
+  }
+  .animate span:nth-of-type(11) {
+    animation-delay: .5s;
+  }
+  .animate span:nth-of-type(12) {
+    animation-delay: .55s;
+  }
+  .animate span:nth-of-type(13) {
+    animation-delay: .6s;
+  }
+  .animate span:nth-of-type(14) {
+    animation-delay: .65s;
+  }
+  .animate span:nth-of-type(15) {
+    animation-delay: .7s;
+  }
+  .animate span:nth-of-type(16) {
+    animation-delay: .75s;
+  }
+  .animate span:nth-of-type(17) {
+    animation-delay: .8s;
+  }
+  .animate span:nth-of-type(18) {
+    animation-delay: .85s;
+  }
+  .animate span:nth-of-type(19) {
+    animation-delay: .9s;
+  }
+  .animate span:nth-of-type(20) {
+    animation-delay: .95s;
+  }
+
+
+.seven span {
+    color: #FF8505;
+    opacity: 0;
+    transform: translate(-150px, 0) scale(.3);
+    animation: leftRight .5s forwards;
+  }
+  
+  
+  @keyframes leftRight {
+    40% {
+      transform: translate(50px, 0) scale(.7);
+      opacity: 1;
+      color: #559495;
+    }
+  
+    60% {
+      color: #0f40ba;
+    }
+  
+    80% {
+      transform: translate(0) scale(2);
+      opacity: 0;
+    }
+  
+    100% {
+      transform: translate(0) scale(1);
+      opacity: 1;
+    }
+  }
+  
+
+/* Page 2 */
+.selection{
+    background: url(../images/sean-oulashin-KMn4VEeEPR8-unsplash.jpg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100vh;
+	/* animation: scaleUp .9s;  */
+    /* animation-timing-function: linear; */
+}
+
+.landing2 h1{
+    margin-top: 250px;
+    margin-bottom: 40px;
+    color: #FFDD55;
+    max-width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 55px;
+    font-family: "Josefin Sans", sans-serif;
+  
+}
+.form{
+    max-width: 90%;
+    color: #ffffff;
+    position: absolute; /*Can also be `fixed`*/
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    overflow: auto;
+    text-align: center;
+    line-height: 0.99;
+    overflow: hidden;
+    animation-delay: 3s;
+    animation: fadeInAnimation ease 2s;
+}
+.landing2 span{
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    font-weight: 100;
+}
+.explore2{
+    position: fixed;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 30px;
+    display: flex;
+    gap: 25px;
+    text-align: center;
+}
+.explore2 button{
+    background-color: #FF543E;
+    border: 1px solid #FF543E;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: scale 2s;
+
+}
+.explore2 a{
+    text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    color: #ffffff;
+    letter-spacing: 1.5;
+    transition: scale 2s;
+    font-size: 13px;
+
+}
+.explore2 button:hover{
+    background-color: #ffffff00;
+    border: 1px solid #FFDD55;
+    scale: 1.2;
+}
+.explore2 a:hover{
+    text-decoration: none;
+    color: #ffffff;
+
+}
+
+.form input{
+    border-radius: 15px;
+    background: none;
+    color: #ffffffef;
+    border: 1px solid #FFDD55;
+    padding: 10px;
+    margin: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+form ::placeholder{
+    color: #ffffff;
+
+}
+.form input:focus{
+    border: 1px solid #ffffff;
+    outline: none;
+    transform: scale(1.2);
+
+}
+
+form{
+    margin-top: -30px;
+}
+.public{
+    margin-top: 95px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 200;
+}
+.public a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+/* User profile css */
+
+.avatar {
+    vertical-align: middle;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 1px solid #FFDD55;
+}
+.profile{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+.proname p{
+    display: inline-block;
+    margin-top: 8px;
+}
+.timer{
+    margin-inline: auto;
+    left: 50%;
+    right: 50%;
+    width: 120px;
+    height: 60px;
+    text-align: center;
+}
+#demo{
+    font-size: 20px;
+    margin-top: 30px;
+  }
+.title{
+    left: 50%;
+    right: 50%;
+    text-align: center;
+    font-size: 12px;
+}
+.cardtitle{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 5px;
+    padding-left: 10px;
+}
+.location{
+    font-size: 12px;
+    color: #707070;
+}
+.uname{
+    font-size: 18px;
+    font-weight: 600;
+    padding-bottom: 3px;
+}
+
+.playerimg{
+    height: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+.usertext{
+    padding-left: 4px;
+    vertical-align: middle;
+    display:inline-block;
+}
+.couple{
+    text-align: center;
+    border-bottom: 1px solid #C9C9C9;
+    height: 30px;
+}
+.couple a{
+    text-decoration: none;
+    color: #FF543E;
+}
+.players{
+    margin-top: 10px;
+}
+.couplepage{
+    transition: all;
+    animation: scaleUp .4s; 
+}
+
+/* Welcome page */
+.banner {
+    position: relative;
+    height: 500px;
+  }
+  
+  .banner-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    overflow: hidden;
+    z-index: -1;
+  }
+  
+  .banner-video video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 100%;
+    min-height: 100%;
+  }
+  
+  .banner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 1;
+    color: #fff;
+  }
+  
+  .banner-text h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+  }
+  
+  .banner-text p {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+/* Key Frames */
+@keyframes scaleUp {
+	from { opacity: 0; transform: scale(.10); }
+}
+@keyframes fadeInAnimation {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes slidein {
+    from {
+      margin-left: 100%;
+      width: 300%;
+    }
+  
+    to {
+      margin-left: 0%;
+      width: 100%;
+    }
+}
+@keyframes zoomIn {
+  0% {
+      transform: scale(0);
+  }
+  100% {
+      transform: scale(1);
+  }
+}
+/* Quiz Style */
+.quiz-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px; /* Adjust the space between the items */
+  margin-top: 150px;
+}
+
+.quiz-container .quiz {
+  height: 300px;
+  width: 80%; /* Adjust width as needed */
+  padding: 20px; /* Adjust padding as needed */
+  border-radius: 15px; /* Rounded corners */
+  background-color: #f0f0f0; /* Background color */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: Add some shadow */
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  transition: scale 1s;
+}
+.quiz:hover{
+  scale: 1.02;
+}
+.quiz-container .text {
+  position: relative;
+  bottom: 10px; /* Adjust as needed */
+  left: 10px; /* Adjust as needed */
+  font-size: 16px;
+  color: #333; /* Text color */
+}
+
+
+/* Match.html styling */
+
+.matchsection {
+  text-align: center;
+  padding: 50px 100px;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  max-width: 100vh;
+  margin: 50px auto;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.who h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.player1, .player2, .match {
+  margin: 20px 0;
+  width: 200px;
+  height: 500px;
+  background-color: #ddd;
+  display: inline-block;
+}
+.match {
+  background-color: #ff4081;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+/* Game.ejs Styling */
+.sound{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  width: 70px;
+  height: 70px;
+  background-color: #FF8505;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            z-index: 1000;
+}
+.sound:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.sound:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background-color: #FF8505;
+}
+
+
+.gamepage{
+  width: 100;
+  overflow-y: auto;
+  padding: 20px;
+}
+
+.gameimage{
+  animation: scaleUp ease 2s;
+  height: 320px;
+  width: 320px;
+}
+.gametext{
+  text-align: center;
+  padding: 70px 0;
+  color: #f0f0f0;
+
+}
+.gametext h1{
+  font-style: normal;
+}
+.inferno{
+  font-family: "Eater", serif;
+  color: #911302;
+  font-weight: 400;
+  font-size: 30px;
+
+}
+.loveisland{
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 600;
+  font-size: 30px;
+  color: #FFDD55;
+}
+.loveisland span{
+  font-weight: 200;
+  color: #ffffff;
+}
+.gametext p{
+  font-size: 15px;
+  font-weight: 100;
+  width: 100%;
+}
+.game-container{
+  padding: 40px;
+  padding-bottom: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 28px;
+  margin: 10px;
+  font-size: 24px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #fff;
+  background-image: linear-gradient(to bottom right, #ff543e, #ffe63e);
+  border: none;
+  border-radius: 40px;
+  box-shadow: 0px 4px 0px #ffe63e;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 0px #ffe63e;
+}
+
+.button:active {
+  transform: translateY(0px);
+  box-shadow: none;
+  background-image: linear-gradient(to bottom right, #ffe63e, #ff543e);
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.button:before {
+  top: -3px;
+  left: -3px;
+  border-radius: 40px;
+  border-top: 3px solid #fff;
+  border-left: 3px solid #fff;
+}
+
+.button:after {
+  bottom: -3px;
+  right: -3px;
+  border-radius: 40px;
+  border-bottom: 3px solid #fff;
+  border-right: 3px solid #fff;
+}
+
+
+/* LoveislandUI Final style. */
+.loveislandui-container{
+  position: relative;
+  background: url(../images/fantasy-style-clouds.jpg) no-repeat; 
+  font-family: "Merriweather Sans", sans-serif;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 100vh;
+}
+.villa-img{
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.villa-img img {
+  width: 1000px; /* Adjust as needed */
+  height: auto;
+}
+
+.sec-container{
+  position: relative;
+  padding: 50px;
+  padding-top: 150px;
+  height: 300px;
+  z-index: 2;
+}
+.sec-p{
+  width: 30%;
+  height: 50px;
+  margin-bottom: 0px;
+}
+.sec-p p{
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 20px; /* 1.5 times the font size */
+  margin-bottom: 26px; /* 2 times the font size */
+  letter-spacing: 1.5px; /* 0.12 times the font size */
+  word-spacing: 2px; /* 0.16 times the font size */
+}
+.sec-h{
+  height: 200px;
+  margin-bottom: -30px;
+}
+.sec-h h2{
+  font-size: 150px;
+  font-family: "Josefin Sans", sans-serif;
+  color: #f0f0f0;
+}
+.sec-container span{
+  color: #ff4081;
+  font-weight: 400;
+}
+.row {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Adjust as needed */
+    overflow: hidden; /* Prevent horizontal overflow */
+}
+
+.info-section {  
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  /* justify-content: center; */
+  gap: 35px;
+  margin-top: 100px;
+  z-index: 2;
+  padding: 50px;
+}
+
+.glass {
+  display: flex;
+  cursor: pointer;
+  /* flex-direction: column; */
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  width: 500px; /* Adjust as needed */
+  height: 200px;
+  text-align: center;
+}
+
+.glass img {
+  background: rgba(255, 255, 255, 0.2);
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.glass p{
+  width: 300px;
+  text-align: left;
+  padding: 10px;
+  font-size: 13px;
+  font-weight: 200;
+  line-height: 20px; /* 1.5 times the font size */
+  margin-bottom: 26px; /* 2 times the font size */
+  letter-spacing: 1.5px; /* 0.12 times the font size */
+  word-spacing: 2px; /* 0.16 times the font size */
+}
+/* CSS */
+.button-86 {
+  all: unset;
+  width: 100px;
+  height: 30px;
+  font-size: 16px;
+  background: transparent;
+  border: none;
+  position: relative;
+  color: #f0f0f0;
+  cursor: pointer;
+  z-index: 1;
+  padding: 10px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+.fa-instagram{
+  font-size: 30px;
+  font-weight: 800;
+  padding-right: 10px;
+}
+.liu-button{
+  display: flex;
+  gap: 15px;
+}
+.sec-button{
+  background: none;
+  color: #f0f0f0;
+  border: none;
+  border-left: 1px solid #f0f0f0;
+  padding: 10px 20px;
+  cursor: pointer;
+}
+.sec-button:hover{
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+
+.drop-in span,
+.drop-in::before,
+.drop-in::after {
+  display: inline-block;
+  animation: dropIn 0.8s ease forwards;
+}
+
+.drop-in::before,
+.drop-in::after {
+  content: attr(data-content);
+}
+
+.drop-in span {
+  animation-delay: 0s;
+}
+
+.drop-in::before {
+  animation-delay: 0.05s;
+}
+
+.drop-in::after {
+  animation-delay: 0.1s;
+}
+.button-86::after,
+.button-86::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -99999;
+  transition: all .4s;
+}
+
+.button-86::before {
+  transform: translate(0%, 0%);
+  width: 100%;
+  height: 100%;
+  background: #FF6D1C;
+  border-radius: 10px;
+}
+
+.button-86::after {
+  transform: translate(10px, 10px);
+  width: 35px;
+  height: 35px;
+  background: #ffffff15;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border-radius: 50px;
+}
+
+.button-86:hover::before {
+  transform: translate(5%, 20%);
+  width: 110%;
+  height: 110%;
+}
+
+.button-86:hover::after {
+  border-radius: 10px;
+  transform: translate(0, 0);
+  width: 100%;
+  height: 100%;
+}
+
+.button-86:active::after {
+  transition: 0s;
+  transform: translate(0, 5%);
+}
+
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleUp {
+	from { opacity: 0; transform: scale(.10); }
+}
+/* responsive design */
+/* small phone */
+@media screen and (max-width: 320px) {
+   .landing h1{
+    font-size: 45px;
+    margin-top: 240px;
+   }
+   .landing2 h1{
+    margin-top: 160px;
+    font-size: 40px;
+  }
+
+}
+@keyframes dropIn {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Tablet */
+/* @media screen and (max-width: 768px) {
+    .landing h1{
+        font-size: 65px;
+        margin-top: 215px;
+       }
+       .landing2 h1{
+        margin-top: 435px;
+        font-size: 65px;
+      }
+} */

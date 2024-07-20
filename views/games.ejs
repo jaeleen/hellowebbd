@@ -1,0 +1,126 @@
+<%- include("partials/header.ejs") %>
+<body style="background-image: url(/images/fantasy-style-clouds.jpg); background-position: top; background-attachment: fixed; overflow-x: hidden;">
+  
+
+      <div class="gamepage" >
+        <div class="profile">
+            <!-- <div class="proimg">
+              <img src="/images/etty-fidele-jhD3hdnlBww-unsplash.jpg" alt="Avatar" class="avatar">            </div>
+            
+            <div class="proname">
+              <p>Liana.Tanjino</p>
+            </div> -->
+        </div>
+        <div class="sound">
+            <i class="fa-solid fa-volume-high"></i>
+        </div>
+        <div class="game-container">
+            <div class="game">
+                <img src="/images/af93c9f21a248d3d70ea0b9759716458.png" alt="Avatar" class="gameimage">
+            </div>
+            <div class="gametext">
+                <h1><span class="inferno">Paranoia</span></h1>
+                <p>Stranded on a deserted island. Compete to form connections and escape inferno.
+                </p>
+                <button class="button">Begin</button>
+            </div>
+            
+        </div>
+    
+        <div class="game-container">
+            <div class="gametext">
+                <h1 class="loveisland">The Idea of you</span></h1>
+                <p>Couple up and compete in challenges to find love and win a cash prize
+                </p>
+                <button class="button">Begin</button>
+    
+            </div>
+            <div class="game">
+                <img src="/images/vecteezy_3d-illustration-of-small-island-view-icon-isolated-on_44635273.png" alt="Avatar" class="gameimage">
+            </div>
+           
+        </div>
+
+        <div class="game-container">
+            <div class="game">
+                <img src="/images/9f950d1551dd2aa30c65d0af1f321a1f.png" alt="Avatar" class="gameimage">
+            </div>
+            <div class="gametext">
+                <h1>Would you Rather</h1>
+                <p>Stranded on a deserted island. Compete to form connections and escape to Love island with your partner.
+                </p>
+                <button class="button">Begin</button>
+            </div>
+            
+        </div>
+
+        <div class="game-container">
+            <div class="gametext">
+                <h1>Love Island</h1>
+                <p>Couple up with poolayer and pay the coupelke games againet outher couples
+                    the most veted copuels get to take a trip to paradice.
+                </p>
+                <button class="button">Begin</button>
+    
+            </div>
+            <div class="game">
+                <img src="/images/vecteezy_3d-illustration-of-small-island-view-icon-isolated-on_44635273.png" alt="Avatar" class="gameimage">
+            </div>
+           
+        </div>
+      </div>
+      <script>
+        // call a funtion. 
+
+        var audio = new Audio('/audios/187926__fliegermatze__breaking-sound.mp3');
+        var isPlaying = false;
+
+        document.querySelector(".sound").addEventListener("click", function() {
+            if (isPlaying) {
+                audio.pause();
+            } else {
+                audio.play().catch(error => {
+                    console.error('Error attempting to play audio:', error);
+                });
+            }
+            isPlaying = !isPlaying;
+            toggleSoundIcon();
+        });
+
+        function toggleSoundIcon() {
+            var icon = document.querySelector(".sound i");
+            if (isPlaying) {
+                icon.classList.remove("fa-volume-high");
+                icon.classList.add("fa-volume-xmark");
+            } else {
+                icon.classList.remove("fa-volume-xmark");
+                icon.classList.add("fa-volume-high");
+            }
+        }
+
+    //     var audio = new Audio('/audios/187926__fliegermatze__breaking-sound.mp3');
+    //     var isPlaying = false;
+        
+    //     document.querySelector(".sound").addEventListener("click", function(){
+    //         audio.play().catch(error => {
+    //              console.error('Error attempting to play audio:', error);
+    //          });
+
+    //     }
+    // );
+    
+        var numofbutton= document.querySelectorAll(".button").length;
+
+        for(var i = 0; i< numofbutton; i++){
+            document.querySelectorAll(".button")[i].addEventListener("click", function(){
+                var enter = new Audio('/audios/582898__ironcross32__snap-click-01.wav');
+                enter.play().catch(error => {
+                 console.error('Error attempting to play audio:', error);
+             });
+            });
+        }
+
+  
+    
+    </script>
+</body>

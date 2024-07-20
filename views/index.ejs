@@ -1,0 +1,62 @@
+<%- include("partials/header.ejs") %>
+  <body>
+    
+    <audio controls autoplay hidden>
+      <source src="assets/Voicy_Love Island Theme Song.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+<div class="welcome">
+
+ <!-- Top navigation -->
+    
+ <div class="topnav">
+  <!-- <a href="index.ejs">
+    <img src="images/DDSblacklogo.png" alt="" />
+  </a> -->
+</div>
+<div class="center">
+
+  <div class="animate seven">
+    <span>W</span><span>e</span><span>l</span><span>c</span><span>o</span><span>m</span><span>e</span>
+  </div>
+
+
+  <div class="landing">
+    <p>To the <span>loveisland</span> inspried</p>
+    <h1 id="topic">Online <span>Games!</span></h1>
+
+    <!-- <p>Players</p>
+    <ul>
+      <li></li>
+      <li></li>
+      <li></li>
+      <li></li>
+    </ul> -->
+  </div>
+
+  <div class="explore">
+    <button class="exploreButton" id="exploreButton">
+      <a href="/register">BEGIN</a>
+    </button>
+    
+  </div>
+
+
+</div>
+    </div>
+   
+    <script>
+      // call a funtion. 
+      document.getElementById("exploreButton").addEventListener("click", handleClick);
+
+      function handleClick(){
+          alert("I got clicked!");
+      }
+  </script>
+
+  </body>
+
+  <!-- <footer>
+    <p>Copyright <%= new Date().getFullYear() %></p>
+  </footer> -->
+</html>

@@ -1,0 +1,27 @@
+<%- include("partials/header.ejs") %>
+
+<body>
+    <div class="container">
+        <div id="question-section">
+            <h1 id="question"><%= data.question %></h1>
+            <div class="avatars">
+                <% players.forEach(player => { %>
+                    <div class="player">
+                        <img src="#" alt="<%= player.uname %>" class="avatar" onclick="selectAnswer('<%= player.id %>')">
+                        <p><%= player.uname %></p>
+                    </div>
+                <% }); %>
+            </div>
+            <div id="result"></div>
+            <div id="timer">Time left: <span id="time">10</span>s</div>
+        </div>
+        <div id="chat-section">
+            <h2>Chat</h2>
+            <div id="chat-box"></div>
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div>
+    </div>
+
+</body>
+</html>
