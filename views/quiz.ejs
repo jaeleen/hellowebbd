@@ -1,25 +1,78 @@
 <%- include("partials/header.ejs") %>
 
 <body>
-  <div class="container">
-      <div id="question-section">
-          <h1 id="question"> <%= data.question %></h1>
-          <div class="options">
-              <button class="option" onclick="answer('yes')">Yes</button>
-              <button class="option" onclick="answer('no')">No</button>
-          </div>
-          <div id="result"></div>
-          <div id="timer">Time left: <span id="time">10</span>s</div>
-      </div>
-      <div id="chat-section">
-          <h2>Chat</h2>
-          <div id="chat-box"></div>
-          <input type="text" id="chat-input" placeholder="Type a message...">
-          <button onclick="sendMessage()">Send</button>
-      </div>
-  </div>
+    <div class="container">
+        <div id="question-section">
+            <h1 id="question"><%= data.question %></h1>
+            <div class="options">
+                <button class="option" id="option1"></button>
+                <button class="option" id="option2"></button>
+            </div>
+            <div id="result"></div>
+            <div id="timer">Time left: <span id="time">10</span>s</div>
+        </div>
+        <div class="controls">
+            <button id="pause" onclick="pauseTimer()">Pause</button>
+            <button id="resume" onclick="resumeTimer()">Resume</button>
+        </div>
+        <!-- <div id="chat-section">
+            <h2>Chat</h2>
+            <div id="chat-box"></div>
+            <input type="text" id="chat-input" placeholder="Type a message...">
+            <button onclick="sendMessage()">Send</button>
+        </div> -->
+    </div>
 
   <!-- <script src="/script.js"></script> -->
+  <script>
+    // Extract words after "rather" and before "or", and after "or"
+    const question = "<%= data.question %>";
+    const ratherIndex = question.indexOf("rather");
+    const orIndex = question.indexOf("or");
+
+    if (ratherIndex !== -1 && orIndex !== -1) {
+      const option1 = question.substring(ratherIndex + 7, orIndex).trim();
+      const option2 = question.substring(orIndex + 2).trim();
+
+      document.getElementById('option1').innerText = option1;
+      document.getElementById('option2').innerText = option2;
+
+      document.getElementById('option1').onclick = () => answer(option1);
+      document.getElementById('option2').onclick = () => answer(option2);
+    }
+
+    function answer(selectedOption) {
+      console.log(`User selected: ${selectedOption}`);
+      // Implement your logic for handling the answer
+    }
+
+    // Timer logic
+    let timeLeft = 10;
+    const timerElement = document.getElementById('time');
+    let countdown;
+
+    function startTimer() {
+      countdown = setInterval(() => {
+        timeLeft--;
+        timerElement.textContent = timeLeft;
+        if (timeLeft <= 0) {
+          clearInterval(countdown);
+          // Refresh the page to load the next question
+          window.location.reload();
+        }
+      }, 1000);
+    }
+
+    function pauseTimer() {
+      clearInterval(countdown);
+    }
+
+    function resumeTimer() {
+      startTimer();
+    }
+
+    startTimer();
+  </script>
 </body>
 </html>
 
