@@ -1,27 +1,30 @@
 <%- include("partials/header.ejs") %>
 
 <body>
+  <div class="trivia">
     <div class="container">
-        <div id="question-section">
-            <h1 id="question"><%= data.question %></h1>
-            <div class="options">
-                <button class="option" id="option1"></button>
-                <button class="option" id="option2"></button>
-            </div>
-            <div id="result"></div>
-            <div id="timer">Time left: <span id="time">10</span>s</div>
-        </div>
-        <div class="controls">
-            <button id="pause" onclick="pauseTimer()">Pause</button>
-            <button id="resume" onclick="resumeTimer()">Resume</button>
-        </div>
-        <!-- <div id="chat-section">
-            <h2>Chat</h2>
-            <div id="chat-box"></div>
-            <input type="text" id="chat-input" placeholder="Type a message...">
-            <button onclick="sendMessage()">Send</button>
-        </div> -->
-    </div>
+      <div id="question-section">
+          <h1 id="question"><%= data.question %></h1>
+          <div class="options">
+              <button class="button-52" id="option1"></button>
+              <button class="button-52" id="option2"></button>
+          </div>
+          <div id="result"></div>
+          <div id="timer">Time left: <span id="time">10</span>s</div>
+      </div>
+      <div class="controls">
+          <button id="pause" onclick="pauseTimer()">Pause</button>
+          <button id="resume" onclick="resumeTimer()">Resume</button>
+      </div>
+      <!-- <div id="chat-section">
+          <h2>Chat</h2>
+          <div id="chat-box"></div>
+          <input type="text" id="chat-input" placeholder="Type a message...">
+          <button onclick="sendMessage()">Send</button>
+      </div> -->
+  </div>
+  </div>
+   
 
   <!-- <script src="/script.js"></script> -->
   <script>

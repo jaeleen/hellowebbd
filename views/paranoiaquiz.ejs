@@ -1,13 +1,15 @@
 <%- include("partials/header.ejs") %>
 
 <body>
-    <div class="container">
+<div class="trivianame">
+    <p>Paranoia</p>
+</div>    <div class="container">
         <div id="question-section">
             <h1 id="question"><%= data.question %></h1>
             <div class="avatars">
                 <% players.forEach(player => { %>
                     <div class="player">
-                        <img src="#" alt="<%= player.uname %>" class="avatar" onclick="selectAnswer('<%= player.id %>')">
+                        <img src="/images/jcob-nasyr-PItsVmyu34Q-unsplash.jpg" alt="<%= player.uname %>" class="avatar" onclick="selectAnswer('<%= player.id %>')">
                         <p><%= player.uname %></p>
                     </div>
                 <% }); %>
@@ -15,13 +17,17 @@
             <div id="result"></div>
             <div id="timer">Time left: <span id="time">10</span>s</div>
         </div>
-        <div id="chat-section">
+        <!-- <div id="chat-section">
             <h2>Chat</h2>
             <div id="chat-box"></div>
             <input type="text" id="chat-input" placeholder="Type a message...">
             <button onclick="sendMessage()">Send</button>
-        </div>
+        </div> -->
+        <!-- <div id="spline-section">
+            <h2>Spline Viewer</h2>
+            <spline-viewer url="https://prod.spline.design/cYEhDBGw39ADsaml/scene.splinecode"></spline-viewer>
+        </div> -->
     </div>
-
+    <!-- <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.3/build/spline-viewer.js"></script> -->
 </body>
 </html>
